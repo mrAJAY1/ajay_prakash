@@ -1,8 +1,10 @@
 import { useState } from "react";
 import { NavLink } from "react-router-dom";
 import styled, { keyframes } from "styled-components";
+import { motion } from "framer-motion";
 import { YinYang } from "../icons";
 import { HomeButton, Logo, SocialIcons } from "../subComponents";
+import Intro from "./Intro";
 
 const MainContainer = styled.div`
   background: ${(props) => props.theme.body};
@@ -83,6 +85,20 @@ const rotate = keyframes`
     transform: rotate(360deg);
   }
 `;
+const shake = keyframes`
+  5%{
+    transform: scale(1.05) rotate(5deg);
+  }
+  10%{
+    transform: scale(1.05) rotate(-5deg);
+  }
+  15%{
+    transform: scale(1.05) rotate(5deg);
+  }
+  20%{
+    transform: none;
+  }
+`;
 const Center = styled.button`
   position: absolute;
   top: ${(props) => (props.click ? "85%" : "50%")};
@@ -104,6 +120,9 @@ const Center = styled.button`
   }
   & > :last-child {
     padding-top: 1rem;
+  }
+  span {
+    animation: ${shake} 2s infinite linear 2s;
   }
 `;
 const DarkDiv = styled.div`
@@ -129,7 +148,7 @@ function MainPage() {
       <Container>
         <HomeButton />
         <Logo click={click} />
-        <SocialIcons click={click} />
+        <SocialIcons click={click} theme={click ? "dark" : "light"} />
         <DarkDiv click={click} />
         <Center click={click}>
           <YinYang
@@ -147,23 +166,34 @@ function MainPage() {
           target="_blank"
           href="mailto:thisismeajayprakash@gmail.com?subject=mail from portfolio"
         >
-          Say Hi...
+          <motion.h2 whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }}>
+            Say Hi...
+          </motion.h2>
         </Contact>
         <Blog to="/blogs">
-          <h2>Blogs</h2>
+          <motion.h2 whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }}>
+            Blogs
+          </motion.h2>
         </Blog>
         <Works to="/works" click={click}>
-          <h2>Works</h2>
+          <motion.h2 whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }}>
+            Works
+          </motion.h2>
         </Works>
         <BottomBar>
-          <About to="/works" click={click}>
-            <h2>About Me.</h2>
+          <About to="/about" click={click}>
+            <motion.h2 whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }}>
+              About Me.
+            </motion.h2>
           </About>
-          <Skills to="/works">
-            <h2>My Skills.</h2>
+          <Skills to="/skills">
+            <motion.h2 whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }}>
+              My Skills.
+            </motion.h2>
           </Skills>
         </BottomBar>
       </Container>
+      {click ? <Intro click={click} /> : null}
     </MainContainer>
   );
 }

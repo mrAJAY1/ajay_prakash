@@ -3,7 +3,8 @@ import styled from "styled-components";
 
 const LogoContainer = styled.h1`
   display: inline-block;
-  color: ${(props) => (props.click ? "yellow" : props.theme.text)};
+  line-height: 2rem;
+  color: ${(props) => (props.click ? props.theme.body : props.theme.text)};
   transition: ${(props) =>
     props.click
       ? "color 0.3s ease 1.4s,text-shadow 0.3s ease 1.4s"
@@ -14,9 +15,18 @@ const LogoContainer = styled.h1`
   left: 2rem;
   top: 2rem;
   z-index: 3;
+  @media (max-width: 768px) {
+    text-orientation: ${(props) => (props.home ? null : "upright")};
+    writing-mode: ${(props) => (props.home ? null : "vertical-lr")};
+    line-height: ${(props) => (props.home ? null : "0rem")};
+  }
 `;
-function Logo({ click }) {
-  return <LogoContainer click={click}>Ajay</LogoContainer>;
+function Logo({ click, home }) {
+  return (
+    <LogoContainer home={home} click={click}>
+      Ajay
+    </LogoContainer>
+  );
 }
 
 export default Logo;

@@ -1,6 +1,7 @@
 /* eslint-disable react/prop-types */
 import { BsGithub, BsLinkedin, BsTwitter } from "react-icons/bs";
 import styled from "styled-components";
+import { darkTheme } from "../Theme";
 
 const Icons = styled.div`
   display: flex;
@@ -8,10 +9,14 @@ const Icons = styled.div`
   align-items: center;
   position: fixed;
   left: 2rem;
+  @media (max-width: 768px) {
+    left: 1.5rem;
+  }
   bottom: 0;
   z-index: 3;
   svg {
-    fill: ${(props) => (props.click ? props.theme.body : "currentColor")};
+    fill: ${(props) =>
+      props.theme === "dark" ? darkTheme.text : darkTheme.body};
     transition: ${(props) =>
       props.click ? "fill 0.5s ease 1.4s" : "fill 0.5s ease 0.1s"};
     width: 25px;
@@ -25,15 +30,15 @@ const Line = styled.span`
   width: 2px;
   height: 8rem;
   background-color: ${(props) =>
-    props.click ? props.theme.body : props.theme.text};
+    props.color === "dark" ? darkTheme.text : darkTheme.body};
   transition: ${(props) =>
     props.click
       ? "background-color 0.5s ease 1.4s"
       : "background-color 0.5s ease 0.1s"};
 `;
-function SocialIcons({ click }) {
+function SocialIcons({ click, theme }) {
   return (
-    <Icons click={click}>
+    <Icons click={click} theme={theme}>
       <div>
         <a
           style={{ color: "inherit" }}
@@ -64,7 +69,7 @@ function SocialIcons({ click }) {
           <BsTwitter />
         </a>
       </div>
-      <Line click={click} />
+      <Line click={click} color={theme} />
     </Icons>
   );
 }
