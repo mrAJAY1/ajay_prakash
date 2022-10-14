@@ -4,6 +4,7 @@ import { Design, Develope } from "../icons/AllSvg";
 import { lightTheme } from "../Theme";
 import { SocialIcons, HomeButton, Logo } from "../subComponents";
 import ParticleComponent from "../subComponents/ParticleComponent";
+import BigTitle from "../subComponents/BigTitle";
 
 const Box = styled.div`
   background-color: ${(props) => props.theme.body};
@@ -101,7 +102,7 @@ function MySkillPage() {
           </Title>
           <Description>
             I&#39;m a full-stack developer. I love to develop front-end as well
-            as back-end application which performs.
+            as back-end application that performs.
           </Description>
           <Description>
             <strong>My Skills</strong>
@@ -143,6 +144,7 @@ function MySkillPage() {
             </ul>
           </Description>
         </Main>
+        <BigTitle text="skills" top="2%" left="20%" />
       </Box>
     </ThemeProvider>
   );

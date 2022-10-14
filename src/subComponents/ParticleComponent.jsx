@@ -18,9 +18,7 @@ function ParticleComponent({ theme }) {
   const particlesInit = async (main) => {
     await loadFull(main);
   };
-  const particlesLoaded = async (container) => {
-    console.log(container);
-  };
+  const particlesLoaded = async () => {};
   return (
     <Box>
       <Particles
@@ -32,5 +30,4 @@ function ParticleComponent({ theme }) {
     </Box>
   );
 }
-
 export default ParticleComponent;

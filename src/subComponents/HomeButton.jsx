@@ -28,8 +28,7 @@ const Home = styled.button`
   cursor: pointer;
   transition: all 0.5s;
   &:hover {
-    background-color: rgba(0, 214, 222, 0.8637413394919169);
-    box-shadow: 0px 0px 20px 6px rgba(0, 214, 222, 0.8637413394919169);
+    background-color: black;
     border-color: #fff;
     svg {
       fill: #fff !important;

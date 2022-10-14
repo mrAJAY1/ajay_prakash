@@ -4,6 +4,7 @@ import { HomeButton, Logo, SocialIcons } from "../subComponents";
 import { Blogs } from "../data/BlogData";
 import BlogComponent from "./BlogComponent";
 import AnchorComponent from "../subComponents/AnchorComponent";
+import BigTitle from "../subComponents/BigTitle";
 
 const MainContainer = styled.div`
   background-size: cover;
@@ -14,7 +15,7 @@ const MainContainer = styled.div`
 const Container = styled.div`
   background-color: ${(props) => `rgba(${props.theme.bodyRgba},0.8)`};
   width: 100%;
-  height: auto;
+  min-height: 100vh;
   position: relative;
   padding-bottom: 5rem;
 `;
@@ -57,6 +58,7 @@ function BlogPage() {
           </Grid>
         </Center>
       </Container>
+      <BigTitle text="Blogs" top="5%" right="18%" />
     </MainContainer>
   );
 }
