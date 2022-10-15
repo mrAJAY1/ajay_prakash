@@ -39,7 +39,7 @@ const Home = styled.button`
 function HomeButton(props) {
   const navigate = useNavigate();
   return (
-    <Home {...props} onClick={() => navigate("/")}>
+    <Home {...props} onClick={() => navigate("/ajay_prakash")}>
       <GoHome fill="currentColor" style={{ width: "100%", height: "100%" }} />
     </Home>
   );

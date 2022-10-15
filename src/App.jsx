@@ -18,7 +18,7 @@ function App() {
         {location.pathname === "/" ? <SoundBar home /> : <SoundBar />}
         <AnimatePresence mode="wait">
           <Routes location={location} key={location.pathname}>
-            <Route exact path="/" element={<MainPage />} />
+            <Route exact path="/ajay_prakash" element={<MainPage />} />
             <Route exact path="/contact" element={<ContactPage />} />
             <Route exact path="/works" element={<WorkPage />} />
             <Route exact path="/skills" element={<MySkillPage />} />
