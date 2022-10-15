@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { NavLink } from "react-router-dom";
 import styled, { keyframes } from "styled-components";
 import { motion } from "framer-motion";
@@ -11,7 +11,6 @@ const MainContainer = styled.div`
   width: 100vw;
   height: 100vh;
   overflow: hidden;
-
   position: relative;
 
   h2,
@@ -30,7 +29,7 @@ const Container = styled.div`
 const Contact = styled(NavLink)`
   color: ${(props) => props.theme.text};
   position: absolute;
-  top: 50%;
+  top: calc(50% + 5vh);
   right: calc(1rem + 2vw);
   transform: rotate(90deg) translate(-50%, -50%);
   text-decoration: none;
@@ -134,6 +133,9 @@ const DarkDiv = styled.div`
 function MainPage() {
   const [click, setClick] = useState(false);
   const handleClick = () => setClick(!click);
+  useEffect(() => {
+    window.scrollTo({ top: 0, right: 0, behavior: "smooth" });
+  }, []);
   return (
     <MainContainer>
       <Container>
