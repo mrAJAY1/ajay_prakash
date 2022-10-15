@@ -10,8 +10,8 @@ const Home = styled.button`
   transform: ${(props) =>
     props.side ? "translate(0,-50%)" : " translate(-50%, 0)"};
   @media (max-width: 768px) {
-    left: ${(p) => (p.side ? "1.5rem" : null)};
-    top: ${(p) => (p.side ? "50%" : null)};
+    left: ${(p) => (p.side ? p.left || "1.5rem" : null)};
+    top: ${(p) => (p.side ? p.top || "50%" : null)};
     transform: ${(p) => (p.side ? "translate(0, -50%)" : null)};
   }
   background-color: #fcf6f4;

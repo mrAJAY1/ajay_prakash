@@ -1,6 +1,6 @@
 // import Particles from "react-tsparticles";
 import styled, { keyframes, ThemeProvider } from "styled-components";
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import { CgScrollV } from "react-icons/cg";
 import { motion } from "framer-motion";
 import { darkTheme } from "../Theme";
@@ -14,6 +14,9 @@ import BigTitle from "../subComponents/BigTitle";
 const Box = styled.div`
   background-color: ${(props) => props.theme.body};
   height: 400vh;
+  @media (max-width: 576px) {
+    height: 690vh;
+  }
   position: relative;
   display: flex;
   align-items: center;
@@ -81,6 +84,10 @@ const container = {
 function WorkPage() {
   const ref = useRef(null);
   const yinyang = useRef(null);
+  const [scrollBack, setScrollBack] = useState(false);
+  useEffect(() => {
+    window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
+  }, [scrollBack]);
 
   useEffect(() => {
     const element = ref.current;
@@ -105,7 +112,7 @@ function WorkPage() {
             return <Card key={d.id} data={d} />;
           })}
         </Main>
-        <Rotate ref={yinyang}>
+        <Rotate onClick={() => setScrollBack(!scrollBack)} ref={yinyang}>
           <YinYang width={80} height={80} fill={darkTheme.text} />
         </Rotate>
         <ScrollIcon>

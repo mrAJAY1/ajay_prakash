@@ -1,6 +1,7 @@
 /* eslint-disable react/prop-types */
 import { BsGithub, BsLinkedin, BsTwitter } from "react-icons/bs";
 import styled from "styled-components";
+import { motion } from "framer-motion";
 import { darkTheme } from "../Theme";
 
 const Icons = styled.div`
@@ -39,7 +40,7 @@ const Line = styled.span`
 function SocialIcons({ click, theme }) {
   return (
     <Icons click={click} theme={theme}>
-      <div>
+      <motion.div whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }}>
         <a
           style={{ color: "inherit" }}
           target="_blank"
@@ -48,8 +49,8 @@ function SocialIcons({ click, theme }) {
         >
           <BsGithub />
         </a>
-      </div>
-      <div>
+      </motion.div>
+      <motion.div whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }}>
         <a
           style={{ color: "inherit" }}
           target="_blank"
@@ -58,8 +59,8 @@ function SocialIcons({ click, theme }) {
         >
           <BsLinkedin />
         </a>
-      </div>
-      <div>
+      </motion.div>
+      <motion.div whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }}>
         <a
           style={{ color: "inherit" }}
           target="_blank"
@@ -68,7 +69,7 @@ function SocialIcons({ click, theme }) {
         >
           <BsTwitter />
         </a>
-      </div>
+      </motion.div>
       <Line click={click} color={theme} />
     </Icons>
   );

@@ -31,11 +31,11 @@ const Box = styled.div`
   cursor: pointer;
   position: fixed;
   animation: ${shadower} 3s ease infinite;
-  left: 8rem;
+  right: 3rem;
   top: 3rem;
   z-index: 10;
   @media (max-width: 768px) {
-    left: ${(props) => (props.home ? "6rem" : "auto")};
+    right: ${(props) => (props.home ? "3rem" : "auto")};
     right: ${(props) => (props.home ? null : "1rem")};
   }
 `;

@@ -27,15 +27,6 @@ const MainContainer = styled.div`
 const Container = styled.div`
   padding: 2rem;
 `;
-
-const ContactLink = styled.a`
-  color: ${(props) => props.theme.text};
-  position: absolute;
-  top: 2rem;
-  right: calc(1rem + 2vw);
-  text-decoration: none;
-  z-index: 1;
-`;
 const Contact = styled(NavLink)`
   color: ${(props) => props.theme.text};
   position: absolute;
@@ -162,14 +153,6 @@ function MainPage() {
           />
           <span>click here</span>
         </Center>
-        <ContactLink
-          target="_blank"
-          href="mailto:thisismeajayprakash@gmail.com?subject=mail from portfolio"
-        >
-          <motion.h2 whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }}>
-            Say Hi...
-          </motion.h2>
-        </ContactLink>
         <Contact to="/contact">
           <motion.h2 whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }}>
             Contact

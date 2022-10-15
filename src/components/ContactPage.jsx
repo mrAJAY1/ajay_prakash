@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { HomeButton } from "../subComponents";
 import FormComponent from "../subComponents/FormComponent";
 import ParticleComponent from "../subComponents/ParticleComponent";
 
@@ -17,6 +18,7 @@ function ContactPage() {
     <Container>
       <ParticleComponent theme="light" />
       <FormComponent />
+      <HomeButton side left="1rem" top="3.5rem" />
     </Container>
   );
 }
