@@ -19,10 +19,10 @@ function App() {
         <AnimatePresence mode="wait">
           <Routes location={location} key={location.pathname}>
             <Route exact path="/ajay_prakash" element={<MainPage />} />
-            <Route exact path="/contact" element={<ContactPage />} />
-            <Route exact path="/works" element={<WorkPage />} />
-            <Route exact path="/skills" element={<MySkillPage />} />
-            <Route exact path="/about" element={<AboutPage />} />
+            <Route path="/contact" element={<ContactPage />} />
+            <Route path="/works" element={<WorkPage />} />
+            <Route path="/skills" element={<MySkillPage />} />
+            <Route path="/about" element={<AboutPage />} />
           </Routes>
         </AnimatePresence>
       </ThemeProvider>
