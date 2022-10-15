@@ -155,23 +155,23 @@ function MainPage() {
           />
           <span>click here</span>
         </Center>
-        <Contact to="/contact">
+        <Contact to="/ajay_prakash/contact">
           <motion.h2 whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }}>
             Contact
           </motion.h2>
         </Contact>
-        <Works to="/works" click={click}>
+        <Works to="/ajay_prakash/works" click={click}>
           <motion.h2 whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }}>
             Works
           </motion.h2>
         </Works>
         <BottomBar>
-          <About to="/about" click={click}>
+          <About to="/ajay_prakash/about" click={click}>
             <motion.h2 whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }}>
               About Me.
             </motion.h2>
           </About>
-          <Skills to="/skills">
+          <Skills to="/ajay_prakash/skills">
             <motion.h2 whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }}>
               My Skills.
             </motion.h2>
