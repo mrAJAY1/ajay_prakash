@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/static/css/main.6b7eb822.css",
-    "main.js": "/static/js/main.1c6e9db4.js",
-    "static/media/epic-cinematic-trailer-113981 (1).mp3": "/static/media/epic-cinematic-trailer-113981 (1).5450561f49a3dfcfa9c4.mp3",
-    "static/media/sticker.png": "/static/media/sticker.1a1a91812d9b4cbc2643.png",
-    "static/media/me-flying.png": "/static/media/me-flying.e96d04e4fb350b38c184.png",
-    "index.html": "/index.html",
-    "main.6b7eb822.css.map": "/static/css/main.6b7eb822.css.map",
-    "main.1c6e9db4.js.map": "/static/js/main.1c6e9db4.js.map"
+    "main.css": "/ajay_prakash/static/css/main.6b7eb822.css",
+    "main.js": "/ajay_prakash/static/js/main.1fe669db.js",
+    "static/media/epic-cinematic-trailer-113981 (1).mp3": "/ajay_prakash/static/media/epic-cinematic-trailer-113981 (1).5450561f49a3dfcfa9c4.mp3",
+    "static/media/sticker.png": "/ajay_prakash/static/media/sticker.1a1a91812d9b4cbc2643.png",
+    "static/media/me-flying.png": "/ajay_prakash/static/media/me-flying.e96d04e4fb350b38c184.png",
+    "index.html": "/ajay_prakash/index.html",
+    "main.6b7eb822.css.map": "/ajay_prakash/static/css/main.6b7eb822.css.map",
+    "main.1fe669db.js.map": "/ajay_prakash/static/js/main.1fe669db.js.map"
   },
   "entrypoints": [
     "static/css/main.6b7eb822.css",
-    "static/js/main.1c6e9db4.js"
+    "static/js/main.1fe669db.js"
   ]
 }
