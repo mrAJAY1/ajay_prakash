@@ -3,7 +3,7 @@ import styled, { keyframes, ThemeProvider } from "styled-components";
 import { darkTheme } from "../Theme";
 import { SocialIcons, HomeButton, Logo } from "../subComponents";
 import ParticleComponent from "../subComponents/ParticleComponent";
-import me from "../assets/Images/me-flying.png";
+import me from "../assets/Images/me-flying.webp";
 import BigTitle from "../subComponents/BigTitle";
 
 const Box = styled.div`
