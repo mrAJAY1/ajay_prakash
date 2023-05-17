@@ -1,7 +1,12 @@
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { toast, ToastContainer } from "react-toastify";
 import styled from "styled-components";
+import emailjs from "@emailjs/browser";
+
 import { Phone } from "../icons/AllSvg";
+
+const serviceID = "service_x1n4t08";
+const templateID = "template_fo1xxks";
 
 const Box = styled.div`
   border: solid 3px ${(p) => p.theme.text};
@@ -217,6 +222,7 @@ function FormComponent() {
   });
   const [formErr, setFormErr] = useState({});
   const [submit, setSubmit] = useState(false);
+  const form = useRef(null);
 
   const handleChange = (e) => {
     const { value, name } = e.target;
@@ -275,11 +281,37 @@ function FormComponent() {
     });
     setSubmit(false);
   };
+  const sendFailedNotification = () => {
+    toast.error("could not send message !!", {
+      position: "top-right",
+      autoClose: 2000,
+      hideProgressBar: false,
+      closeOnClick: true,
+      pauseOnHover: false,
+      draggable: false,
+      progress: undefined,
+      theme: "light",
+    });
+    setSubmit(false);
+  };
+  const sendMail = () => {
+    emailjs
+      .sendForm(serviceID, templateID, form.current, "A-mLzY_2e54YotUo_")
+      .then(
+        () => {
+          sendSuccessNotification();
+        },
+        (error) => {
+          console.error(error.text);
+          sendFailedNotification();
+        }
+      );
+  };
   //   const sendFailedNotification = () => {};
 
   useEffect(() => {
     if (submit && Object.keys(formErr).length === 0) {
-      sendSuccessNotification();
+      sendMail();
     } else if (submit && Object.keys(formErr).length > 0) {
       sendErrNotification();
     }
@@ -292,7 +324,7 @@ function FormComponent() {
       <Icon>
         <Phone />
       </Icon>
-      <Form onSubmit={(e) => handleSubmit(e, values)}>
+      <Form ref={form} onSubmit={(e) => handleSubmit(e, values)}>
         <Name>
           <Label />
           <input
