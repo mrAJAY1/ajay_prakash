@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/ajay_prakash/static/css/main.6b7eb822.css",
-    "main.js": "/ajay_prakash/static/js/main.7c8ce196.js",
+    "main.css": "/ajay_prakash/static/css/main.8dd0c6e2.css",
+    "main.js": "/ajay_prakash/static/js/main.ceba7727.js",
     "static/media/epic-cinematic-trailer-113981 (1).mp3": "/ajay_prakash/static/media/epic-cinematic-trailer-113981 (1).5450561f49a3dfcfa9c4.mp3",
     "static/media/me-flying.webp": "/ajay_prakash/static/media/me-flying.94adac123206e6fb66af.webp",
     "static/media/sticker.webp": "/ajay_prakash/static/media/sticker.127aaeb55ad3b6346c1c.webp",
     "index.html": "/ajay_prakash/index.html",
-    "main.6b7eb822.css.map": "/ajay_prakash/static/css/main.6b7eb822.css.map",
-    "main.7c8ce196.js.map": "/ajay_prakash/static/js/main.7c8ce196.js.map"
+    "main.8dd0c6e2.css.map": "/ajay_prakash/static/css/main.8dd0c6e2.css.map",
+    "main.ceba7727.js.map": "/ajay_prakash/static/js/main.ceba7727.js.map"
   },
   "entrypoints": [
-    "static/css/main.6b7eb822.css",
-    "static/js/main.7c8ce196.js"
+    "static/css/main.8dd0c6e2.css",
+    "static/js/main.ceba7727.js"
   ]
 }
